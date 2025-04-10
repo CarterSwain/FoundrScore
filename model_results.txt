@@ -1,0 +1,11 @@
+              precision    recall  f1-score   support
+
+           0       0.70      0.66      0.68      3012
+           1       0.79      0.82      0.80      4693
+
+    accuracy                           0.76      7705
+   macro avg       0.74      0.74      0.74      7705
+weighted avg       0.75      0.76      0.75      7705
+
+Cross-validation accuracy: 0.7586 (+/- 0.0055)
+Best Params: {'classifier__class_weight': 'balanced', 'classifier__max_depth': None, 'classifier__min_samples_leaf': 1, 'classifier__min_samples_split': 5, 'classifier__n_estimators': 200}
