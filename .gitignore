@@ -1,0 +1,55 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# macOS metadata
+.DS_Store
+
+# Model and output files
+models/
+*.pkl
+*.joblib
+
+# Logs and outputs
+*.log
+*.out
+*.txt
+
+# VSCode and IDE settings
+.vscode/
+.idea/
+
+# Test coverage
+htmlcov/
+.coverage
+.cache
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Node modules (if any frontend work happens)
+node_modules/
+
+# Environment variable files
+.env
+.env.*
+
+# Feature importance image or plots
+*.png
+
+# Backup files
+*.bak
+*.swp
+*.tmp
