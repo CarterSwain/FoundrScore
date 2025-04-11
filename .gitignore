@@ -16,6 +16,7 @@ venv/
 
 # Model and output files
 models/
+foundrscore-model/
 *.pkl
 *.joblib
 
