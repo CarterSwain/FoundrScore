@@ -1,18 +1,57 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>FoundrScore</title>
-</head>
-<body>
-  <h1>Enter Your Startup Info</h1>
-  <form method="POST">
-    <label>Country: <input name="country_code" required></label><br>
-    <label>State/Province/Region: <input name="region" required></label><br>
-    <label>City: <input name="city" required></label><br>
-    <label>Industrial Category (e.g., FinTech, EdTech): <input name="category" required></label><br>
-    <label>Total Number of Funding Rounds Raised: <input type="number" name="funding_rounds" required></label><br>
-    <label>Days from Founding to First Funding Round: <input type="number" name="days_to_funding" required></label><br>
-    <button type="submit">Predict</button>
-  </form>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FoundrScore</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen bg-gradient-to-br from-sky-100 via-white to-rose-100 text-gray-800 font-sans flex items-center justify-center p-6">
+    <div class="w-full max-w-xl bg-white border border-blue-200 p-8 rounded-3xl shadow-2xl space-y-6">
+      <div class="text-center">
+        <h1 class="text-4xl font-extrabold text-blue-700 tracking-tight">FoundrScore</h1>
+        <p class="mt-2 text-gray-600">See how your startup stacks up with AI-powered insight.</p>
+      </div>
+
+      <form method="POST" class="space-y-5">
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">Country</label>
+          <input name="country_code" required class="w-full rounded-xl border border-gray-300 px-4 py-2 shadow-sm focus:ring-2 focus:ring-blue-300 outline-none" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">State/Province/Region</label>
+          <input name="region" required class="w-full rounded-xl border border-gray-300 px-4 py-2 shadow-sm focus:ring-2 focus:ring-blue-300 outline-none" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">City</label>
+          <input name="city" required class="w-full rounded-xl border border-gray-300 px-4 py-2 shadow-sm focus:ring-2 focus:ring-blue-300 outline-none" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">
+            Industrial Category
+            <span class="text-xs text-gray-500">(e.g., FinTech, EdTech)</span>
+          </label>
+          <input name="category" required class="w-full rounded-xl border border-gray-300 px-4 py-2 shadow-sm focus:ring-2 focus:ring-blue-300 outline-none" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">Total Number of Funding Rounds Raised</label>
+          <input type="number" name="funding_rounds" required class="w-full rounded-xl border border-gray-300 px-4 py-2 shadow-sm focus:ring-2 focus:ring-blue-300 outline-none" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">Days from Founding to First Funding Round</label>
+          <input type="number" name="days_to_funding" required class="w-full rounded-xl border border-gray-300 px-4 py-2 shadow-sm focus:ring-2 focus:ring-blue-300 outline-none" />
+        </div>
+
+        <div class="text-center pt-4">
+          <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-full shadow-lg transition duration-200">
+            🔍 Predict Now
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
 </html>
