@@ -39,7 +39,7 @@ def get_openai_suggestions(user_input, probability):
        model="gpt-3.5-turbo",
        messages=[{"role": "user", "content": prompt}],
        temperature=0.7,
-       max_tokens=150
+       max_tokens=1000
     )
 
 
