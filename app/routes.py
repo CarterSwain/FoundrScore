@@ -2,21 +2,36 @@ from flask import Blueprint, render_template, request
 import joblib
 import numpy as np
 import pandas as pd
-
 import os
+import requests
 from dotenv import load_dotenv
 load_dotenv()
-
+# OpenAI Setup
 import openai
 from openai import OpenAI
-
 openai = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 
 main = Blueprint("main", __name__)
 
+
+# Hugging Face model download
+MODEL_PATH = "models/foundrscore_model.pkl"
+HF_MODEL_URL = "https://huggingface.co/CarterSwain/foundrscore-model/resolve/main/foundrscore_model.pkl"
+
+# Make sure model exists before loading
+os.makedirs("models", exist_ok=True)
+if not os.path.exists(MODEL_PATH):
+    print("📥 Downloading FoundrScore model from Hugging Face...")
+    response = requests.get(HF_MODEL_URL)
+    with open(MODEL_PATH, "wb") as f:
+        f.write(response.content)
+    print("✅ Model downloaded and saved.")
+    
+    
 # Load model 
 model = joblib.load("models/foundrscore_model.pkl")
+
 
 # Get suggestions for improvement of Score from OpenAI
 def get_openai_suggestions(user_input, probability):
