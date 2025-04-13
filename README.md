@@ -5,6 +5,10 @@ It uses a trained machine learning model to analyze key startup features and out
 
 ---
 
+## Deployed @ https://foundrscore-blue-lake-1210.fly.dev/
+
+---
+
 ## Features
 
 - Predict startup success based on location, funding history, and category
